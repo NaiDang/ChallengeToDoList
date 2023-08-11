@@ -1,0 +1,112 @@
+.container .form {
+    margin-bottom: 32px;
+  }
+  
+  .navigation-bar:hover {
+    cursor: pointer;
+  }
+  
+  input#input-title {
+    padding: 20px 0px 19px 12px;
+    width: 75.7%;
+    margin-right: 26.5px;
+    border-radius: 12px;
+    border: 1px solid #BDBDBD;
+    outline: none;
+    color: #828282;
+    font-size: 14px;
+  }
+  
+  .body{
+    width: 608px;
+  }
+  button.btn {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    border-width: 0;
+    padding: 20px 40px;
+    border-radius: 12px;
+    background: #2F80ED;
+    box-shadow: 0px 2px 6px 0px rgba(127, 177, 243, 0.40);
+  }
+  
+  button.btn:hover {
+    cursor: pointer;
+  }
+  
+  
+  .container .result {
+    display: flex;
+    align-items: center;
+    margin-bottom: 27px;
+  
+  }
+  
+  .container .result .checkbox {
+    border-radius: 4px;
+    width: 24px;
+    border: 1px solid #828282;
+    height: 24px;
+    margin-right: 7px;
+  }
+  
+  .container .result .text-result {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+
+  .text-result.text-result_item {
+    text-decoration: line-through;
+}
+
+  .checkbox-item {
+    background: #2F80ED;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .result .icon-delete {
+    display: flex;
+  }
+  
+  .result .checkbox svg path {
+    fill: #fff;
+  }
+  
+  .result .icon-delete svg path {
+    fill: #BDBDBD;
+  }
+  
+  .container .btn-deleteall {
+    width: 124px;
+    display: flex;
+    border-radius: 4px;
+    background: #EB5757;
+    margin-left: 484px;
+  }
+  
+  .btn-deleteall .icon-delete {
+    fill: #fff;
+    display: flex;
+    align-items: center;
+    margin-right: 3px;
+    padding: 12px 0px 12px 26px;
+  }
+  
+  .btn-deleteall .text-delete {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px 0px 12px 3px;
+  }
+  
+  .checkbox,
+  .btn-deleteall,
+  .icon-delete:hover {
+    cursor: pointer;
+  }
