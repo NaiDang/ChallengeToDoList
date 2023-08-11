@@ -1,4 +1,4 @@
-.navigation-bar.active::before {
+.navigationBar.active::before {
   position: absolute;
   bottom: -18px;
   left: 50%;
@@ -8,4 +8,8 @@
   background-color: #2f80ed;
   border-radius: 4px 4px 0 0;
   transform: translateX(-50%);
+}
+.navigationActive {
+  width: 100%;
+  position: relative;
 }

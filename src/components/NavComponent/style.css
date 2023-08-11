@@ -17,11 +17,8 @@ input#input-title {
   font-size: 14px;
 }
 
-.body {
-  width: 610px;
-}
 button.btn {
-  color: #FFF;
+  color: #fff;
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
@@ -55,8 +52,11 @@ button.btn:hover {
 
 .container .result .text-result {
   color: #000;
+  font-family: Montserrat;
   font-size: 18px;
+  font-style: normal;
   font-weight: 500;
+  line-height: normal;
 }
 
 .text-result.text-result_item {
@@ -69,10 +69,7 @@ button.btn:hover {
   display: flex;
   justify-content: center;
 }
-.output-items{
-  display: block;
-  justify-content: space-between;
-}
+
 .result .icon-delete {
   display: flex;
   position: absolute;

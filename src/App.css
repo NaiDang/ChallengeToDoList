@@ -59,16 +59,3 @@ button {
   background: #2f80ed;
 }
 
-.navigation-all {
-  width: 100%;
-  position: relative;
-}
-.navigation-active {
-  width: 100%;
-  position: relative;
-}
-
-.navigation-completed {
-  width: 100%;
-  position: relative;
-}
