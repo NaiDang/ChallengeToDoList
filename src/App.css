@@ -1,10 +1,15 @@
-
 * {
   margin: 0;
   padding: 0;
 }
-ol, ul { list-style: none; }
-img { border: none; vertical-align: top; }
+ol,
+ul {
+  list-style: none;
+}
+img {
+  border: none;
+  vertical-align: top;
+}
 button {
   background-color: #3a95ea;
   border: 1px solid #2d87da;
@@ -13,7 +18,6 @@ button {
   cursor: pointer;
   padding: 8px 15px;
 }
-
 
 .header {
   color: #333;
@@ -26,8 +30,8 @@ button {
   letter-spacing: -1.62px;
   padding: 32px 0px 58px 0px;
 }
-  .container {
-  width: 608px;
+.container {
+  width: 610px;
   height: 100vh;
   margin: auto auto;
 }
@@ -44,7 +48,6 @@ button {
   text-align: center;
   margin-bottom: 15px;
   display: flex;
-  gap: 100px;
   justify-content: center;
   border-bottom: 1px solid #bdbdbd;
   margin-bottom: 18px;
@@ -56,10 +59,9 @@ button {
   background: #2f80ed;
 }
 
-.navigation-all{
+.navigation-all {
   width: 100%;
- margin-left: 66px;
- position: relative;
+  position: relative;
 }
 .navigation-active {
   width: 100%;
@@ -69,5 +71,4 @@ button {
 .navigation-completed {
   width: 100%;
   position: relative;
-  margin-right: 66px;
 }

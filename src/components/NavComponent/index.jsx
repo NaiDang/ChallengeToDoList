@@ -8,7 +8,11 @@ const Index = ({ activeTab }) => {
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
-
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleAddItem();
+    };
+  }
   const handleAddItem = () => {
     if (inputValue.trim() !== "") {
       setItems([...items, { text: inputValue, showTick: false }]);
@@ -32,12 +36,10 @@ const Index = ({ activeTab }) => {
     const newItems = items.filter((item) => !item.showTick);
     setItems(newItems);
   };
-
   return (
-    <div className="container">
       <div className="body">
         {activeTab === "all" && (
-          <div>
+          <div className="output-items">
             <div className="form">
               <input
                 type="text"
@@ -46,6 +48,7 @@ const Index = ({ activeTab }) => {
                 placeholder="add details"
                 value={inputValue}
                 onChange={handleInputChange}
+                onKeyDown={handleKeyDown}
               />
               <button className="btn" onClick={handleAddItem}>
                 Add
@@ -158,7 +161,6 @@ const Index = ({ activeTab }) => {
           </div>
         )}
       </div>
-    </div>
   );
 };
 

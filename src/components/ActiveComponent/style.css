@@ -1,12 +1,10 @@
-
-
 .navigation-bar.active::before {
   position: absolute;
-  bottom:-18px;
+  bottom: -18px;
   left: 50%;
-  width: 89PX;
+  width: 89px;
   height: 4px;
-  content: '';
+  content: "";
   background-color: #2f80ed;
   border-radius: 4px 4px 0 0;
   transform: translateX(-50%);
