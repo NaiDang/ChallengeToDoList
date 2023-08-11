@@ -1,4 +1,4 @@
-import "./style.css";
+import styles from "./navStyle.module.css"
 import React, { useState } from "react";
 
 const Index = ({ activeTab }) => {
@@ -40,26 +40,26 @@ const Index = ({ activeTab }) => {
     <div className="body">
       {activeTab === "all" && (
         <div>
-          <div className="form">
+          <div className={styles.inputForm}>
             <input
               type="text"
-              id="input-title"
-              className="form-control"
+              id={styles.inputTitle}
+              className={styles.formControl}
               placeholder="add details"
               value={inputValue}
               onChange={handleOnChange}
               onKeyDown={handleKeyDown}
             />
-            <button className="btn" onClick={handleAddItem}>
+            <button className={styles.btn} onClick={handleAddItem}>
               Add
             </button>
           </div>
 
           <div>
             {items.map((item, index) => (
-              <div key={index} className="result">
+              <div key={index} className={styles.result}>
                 <div
-                  className={`checkbox ${item.showTick ? "checkbox-item" : ""}`}
+                  className={`${styles.checkBox} ${item.showTick ? styles.checkBoxItem : ""}`}
                   onClick={() => handleToggleCheck(index)}
                 >
                   {item.showTick && (
@@ -73,8 +73,8 @@ const Index = ({ activeTab }) => {
                   )}
                 </div>
                 <div
-                  className={`text-result ${
-                    item.showTick ? "text-result_item" : ""
+                  className={`${styles.textResult} ${
+                    item.showTick ? styles.textResultItem : ""
                   }`}
                 >
                   {item.text}
@@ -104,19 +104,19 @@ const Index = ({ activeTab }) => {
           <div className="form">
             <input
               type="text"
-              id="input-title"
-              className="form-control"
+              id={styles.inputTitle}
+              className={styles.formControl}
               placeholder="add details"
             />
-            <button className="btn">Add</button>
+            <button className={styles.btn}>Add</button>
           </div>
 
           {items.map(
             (item, index) =>
               !item.showTick && (
-                <div key={index} className="result">
-                  <div className="checkbox"></div>
-                  <div className="text-result">{item.text}</div>
+                <div key={index} className={styles.result}>
+                  <div className={styles.checkBox}></div>
+                  <div className={styles.textResult}>{item.text}</div>
                 </div>
               )
           )}
@@ -128,7 +128,7 @@ const Index = ({ activeTab }) => {
           {items.map(
             (item, index) =>
               item.showTick && (
-                <div key={index} className="result">
+                <div key={index} className={styles.result}>
                   <div
                     className="checkbox checkbox-item"
                     onClick={() => handleToggleCheck(index)}

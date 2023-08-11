@@ -1,12 +1,12 @@
-.container .form {
+.inputForm {
   margin-bottom: 32px;
 }
 
-.navigation-bar:hover {
+.navigationBar:hover {
   cursor: pointer;
 }
 
-input#input-title {
+input#inputTitle {
   padding: 20px 0px 19px 12px;
   width: 462px;
   margin-right: 25px;
@@ -31,26 +31,21 @@ button.btn {
   box-shadow: 0px 2px 6px 0px rgba(127, 177, 243, 0.4);
 }
 
-button.btn:hover {
-  cursor: pointer;
-}
 
-.container .result {
+.result {
   display: flex;
   align-items: center;
   margin-bottom: 27px;
   position: relative;
 }
-
-.container .result .checkbox {
+ .result .checkBox {
   border-radius: 4px;
   width: 24px;
   border: 1px solid #828282;
   height: 24px;
   margin-right: 7px;
 }
-
-.container .result .text-result {
+ .result .textResult {
   color: #000;
   font-family: Montserrat;
   font-size: 18px;
@@ -59,11 +54,11 @@ button.btn:hover {
   line-height: normal;
 }
 
-.text-result.text-result_item {
+.textResult.textResultItem {
   text-decoration: line-through;
 }
 
-.checkbox-item {
+.checkBoxItem {
   background: #2f80ed;
   align-items: center;
   display: flex;
@@ -76,7 +71,7 @@ button.btn:hover {
   right: 0;
 }
 
-.result .checkbox svg path {
+.result .checkBox svg path {
   fill: #fff;
 }
 
