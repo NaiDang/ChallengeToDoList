@@ -1,4 +1,4 @@
-import styles from "./navStyle.module.css"
+import styles from "./navStyle.module.css";
 import React, { useState } from "react";
 
 const Index = ({ activeTab }) => {
@@ -16,6 +16,16 @@ const Index = ({ activeTab }) => {
   const handleAddItem = () => {
     if (inputValue.trim() !== "") {
       setItems([...items, { text: inputValue, showTick: false }]);
+      setInputValue("");
+    }
+  };
+  const handleAddItemActive = () => {
+    if (inputValue.trim() !== "") {
+      const newItem = {
+        text: inputValue,
+        showTick: false,
+      };
+      setItems([...items, newItem]);
       setInputValue("");
     }
   };
@@ -59,7 +69,9 @@ const Index = ({ activeTab }) => {
             {items.map((item, index) => (
               <div key={index} className={styles.result}>
                 <div
-                  className={`${styles.checkBox} ${item.showTick ? styles.checkBoxItem : ""}`}
+                  className={`${styles.checkBox} ${
+                    item.showTick ? styles.checkBoxItem : ""
+                  }`}
                   onClick={() => handleToggleCheck(index)}
                 >
                   {item.showTick && (
@@ -84,31 +96,21 @@ const Index = ({ activeTab }) => {
           </div>
         </div>
       )}
-
       {activeTab === "active" && (
         <div>
-            {/* <div className="form">
-            <input
-              type="text"
-              id="input-title"
-              className="form-control"
-              placeholder="add details"
-              value={inputValue}
-              onChange={handleOnChange}
-              onKeyDown={handleKeyDown}
-            />
-            <button className="btn" onClick={handleAddItem}>
-              Add
-            </button>
-          </div> */}
-          <div className="form">
+          <div className={styles.inputForm}>
             <input
               type="text"
               id={styles.inputTitle}
               className={styles.formControl}
               placeholder="add details"
+              value={inputValue}
+              onChange={handleOnChange}
+              onKeyDown={handleKeyDown}
             />
-            <button className={styles.btn}>Add</button>
+            <button className={styles.btn} onClick={handleAddItemActive}>
+              Add
+            </button>
           </div>
 
           {items.map(
@@ -130,7 +132,7 @@ const Index = ({ activeTab }) => {
               item.showTick && (
                 <div key={index} className={styles.result}>
                   <div
-                    className="checkbox checkbox-item"
+                    className={`${styles.checkBox} ${styles.checkBoxItem}`}
                     onClick={() => handleToggleCheck(index)}
                   >
                     <svg
@@ -142,10 +144,12 @@ const Index = ({ activeTab }) => {
                     </svg>
                   </div>
 
-                  <div className="text-result text-result_item">
+                  <div
+                    className={`${styles.textResult} ${styles.textResultItem}`}
+                  >
                     {item.text}
                   </div>
-                  <div className="icon-delete">
+                  <div className={styles.iconDelete}>
                     <svg
                       onClick={() => handleDeleteItem(index)}
                       xmlns="http://www.w3.org/2000/svg"
@@ -159,8 +163,8 @@ const Index = ({ activeTab }) => {
               )
           )}
 
-          <div className="btn-deleteall" onClick={handleDeleteAllChecked}>
-            <div className="icon-delete">
+          <div className={styles.deleteAll} onClick={handleDeleteAllChecked}>
+            <div className={styles.iconDelete}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="1em"
@@ -169,7 +173,7 @@ const Index = ({ activeTab }) => {
                 <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
               </svg>
             </div>
-            <div className="text-delete">delete all</div>
+            <div className={styles.textDelete}>delete all</div>
           </div>
         </div>
       )}
