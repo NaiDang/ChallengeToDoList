@@ -112,12 +112,16 @@ const Index = ({ activeTab }) => {
               Add
             </button>
           </div>
-
           {items.map(
             (item, index) =>
               !item.showTick && (
                 <div key={index} className={styles.result}>
-                  <div className={styles.checkBox}></div>
+                  <div
+                    className={`${styles.checkBox} ${
+                      item.showTick ? styles.checkboxItem : ""
+                    }`}
+                    onClick={() => handleToggleCheck(index)}
+                  ></div>
                   <div className={styles.textResult}>{item.text}</div>
                 </div>
               )
