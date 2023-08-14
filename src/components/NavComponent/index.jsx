@@ -1,4 +1,4 @@
-import styles from "./navStyle.module.css";
+import styles from "./NavStyle.module.css";
 import React, { useState } from "react";
 
 const Index = ({ activeTab }) => {
