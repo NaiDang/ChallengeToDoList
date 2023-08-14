@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./HomeStyle.module.css";
+import styles from "./homeStyle.module.css";
 import { Link } from "react-router-dom";
 
 const index = ({ setActiveTab, activeTab }) => {

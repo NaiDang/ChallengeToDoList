@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "./App.css";
-import NavComponent from './components/NavComponent/Index';
-import HomeComponent from './components/HomeComponent/Index';
-import ActiveComponent from './components/ActiveComponent/Index';
-import CompletedComponent from './components/CompletedComponent/Index';
+import NavComponent from './components/NavComponent';
+import HomeComponent from './components/HomeComponent';
+import ActiveComponent from './components/ActiveComponent';
+import CompletedComponent from './components/CompletedComponent';
 
 
 const App = () => {

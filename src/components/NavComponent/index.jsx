@@ -1,7 +1,7 @@
-import styles from "./NavStyle.module.css";
+import styles from "./navStyle.module.css";
 import React, { useState } from "react";
 
-const Index = ({ activeTab }) => {
+const IndexHome = ({ activeTab }) => {
   const [inputValue, setInputValue] = useState("");
   const [items, setItems] = useState([]);
 
@@ -175,4 +175,4 @@ const Index = ({ activeTab }) => {
   );
 };
 
-export default Index;
+export default IndexHome;
