@@ -19,16 +19,6 @@ const Index = ({ activeTab }) => {
       setInputValue("");
     }
   };
-  const handleAddItemActive = () => {
-    if (inputValue.trim() !== "") {
-      const newItem = {
-        text: inputValue,
-        showTick: false,
-      };
-      setItems([...items, newItem]);
-      setInputValue("");
-    }
-  };
 
   const handleToggleCheck = (index) => {
     const newItems = [...items];
@@ -108,7 +98,7 @@ const Index = ({ activeTab }) => {
               onChange={handleOnChange}
               onKeyDown={handleKeyDown}
             />
-            <button className={styles.btn} onClick={handleAddItemActive}>
+            <button className={styles.btn} onClick={handleAddItem}>
               Add
             </button>
           </div>
